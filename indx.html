@@ -127,7 +127,7 @@
             }
         </script>
     </div>
-
+    
     <div class="lesson">
         <h2>Lesson 8:Functions Return</h2>
         <p><strong>Concept:</strong>Functions returning values to be used elsewhere</p>
@@ -137,12 +137,38 @@
 
         <script>
             function runlesson8() {
-                document.getElementById(addition8).innerHTML = "10 + 7 =" + addnumbersReturn(10, 7)
+                document.getElementById("addition8").innerHTML = "10 + 7 =" + addnumbersReturn(10, 7)
             }
             function addnumbersReturn(num1, num2) {
                 return num1 + num2;
             }
         </script>
     </div>
+
+    <!--lesson 9-->
+    <div class="lessom">
+        <h2>Lesson 9: Variables scoopes</h2>
+        <p><strong>Concept</strong>Understanding where variables ca be used</p>
+
+        <button onclick="demostrateScope()">Demostrate Variables scope</button>
+        <div class="output" id="soopeoutput">Click button to see variables scope in action</div>
+
+        <script>
+            var globeVariables = "i'm a globe variable"
+            function demostrateScope() {
+                var localVariable = "I'm a local variable"
+                document.getElementById("scoopeoutput").innerHTML =
+                "Global:" + globeVariable + "<br>" +
+                "local:" + localVariable + "<br>"
+                "local variables only exist inside their function"
+            }
+
+            function demostrateLocalScope(params) {
+                document.getElementById("scoopeoutput").innerHTML =  localVariable
+            }
+        </script>
+    </div>
+
+    
 </body>
 </html>
