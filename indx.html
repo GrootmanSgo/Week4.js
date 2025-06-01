@@ -122,8 +122,8 @@
         <div class="output" id="addition7">Result will show here </div>
 
         <script>
-            functions addNumbers(num1, num2){
-                document.getElementById("addition7").innerHTML ="num1 + num2"
+            function addNumbers(num1, num2){
+                document.getElementById("addition7").innerHTML = num1 + " + " + num2 + " = " + (num1 + num2)
             }
         </script>
     </div>
@@ -133,7 +133,7 @@
         <p><strong>Concept:</strong>Functions returning values to be used elsewhere</p>
 
         <button onclick="runlesson8()">Calculate the display result</button>
-        <div class="output" id="additions">Results will show here</div>
+        <div class="output" id="addition8">Results will show here</div>
 
         <script>
             function runlesson8() {
@@ -148,27 +148,24 @@
     <!--lesson 9-->
     <div class="lessom">
         <h2>Lesson 9: Variables scoopes</h2>
-        <p><strong>Concept</strong>Understanding where variables ca be used</p>
+        <p><strong>Concept:</strong> Understanding where variables ca be used</p>
 
-        <button onclick="demostrateScope()">Demostrate Variables scope</button>
-        <div class="output" id="soopeoutput">Click button to see variables scope in action</div>
+        <button onclick="demonstrateScope()">Demostrate Variables scope</button>
+        <div class="output" id="scopeOutput">Click button to see variables scope in action</div>
 
         <script>
-            var globeVariables = "i'm a globe variable"
-            function demostrateScope() {
-                var localVariable = "I'm a local variable"
-                document.getElementById("scoopeoutput").innerHTML =
-                "Global:" + globeVariable + "<br>" +
-                "local:" + localVariable + "<br>"
-                "local variables only exist inside their function"
+             var globalVariable = "I'm a global variable"
+            function demonstrateScope() {
+             var localVariable = "i'm a local variable";
+             document.getElementById("scopeOutput").innerHTML = "Global:" + globalVariable + "<br>" + "Local:" + localVariable + "<br>" + "Local variables only exist inside their function!"    
             }
 
-            function demostrateLocalScope(params) {
-                document.getElementById("scoopeoutput").innerHTML =  localVariable
+            function demonstrateScope() {
+                document.getElementById("scopeOutput").innerHTML = localVariable
             }
         </script>
     </div>
 
-    
+
 </body>
 </html>
