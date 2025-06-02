@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOG IN</title>
+
+    <link rel="stylesheet" type="text" href="style.css">
 </head>
 <body>
     <p>Welcome. Log in</p>
@@ -15,6 +17,8 @@
         id="passwordInput"><br/>
         <p id="message"></p>
         <a href="#" onclick="verifyUser()">log in</a>
+
+        <button type="button" onclick="verifyUser()">input value</button>
     </form>
 
     <script> 
@@ -33,7 +37,7 @@
             var systemUsername = "Bond";
             var systemPassword = "007";
             if(username == systemUsername && password == systemPassword){
-                document.getElementById("message").innerHTML = "Correct.Loggin you in..."
+                document.getElementById("message").innerHTML = "Correct.Loggin you in... "
             }else{
                 document.getElementById("message").innerHTML ="username or password are incorrect"
             }
